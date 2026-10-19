@@ -1,0 +1,81 @@
+# ==========================================
+# İŞLETİM SİSTEMİNE ÖZEL DOSYALAR (OS-Specific)
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ==========================================
+# IDE VE EDİTÖR AYARLARI (IDEs / Editors)
+# ==========================================
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# ==========================================
+# LOGLAR VE GEÇİCİ DOSYALAR (Logs & Temps)
+# ==========================================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.clear/
+
+# ==========================================
+# BAĞIMLILIKLAR (Dependencies / Packages)
+# ==========================================
+node_modules/
+jspm_packages/
+web_modules/
+.pnp/
+.pnp.js
+
+# ==========================================
+# GÜVENLİK VE GİZLİ VERİLER (Security / Env)
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.cert
+
+# ==========================================
+# DERLEME VE ÇIKTI KLASÖRLERİ (Build / Output)
+# ==========================================
+dist/
+build/
+out/
+.next/
+.nuxt/
+.docusaurus/
+target/
+bin/
+obj/
+
+# ==========================================
+# TEST VE KAPSAM RAPORLARI (Testing)
+# ==========================================
+coverage/
+.nyc_output/
+htmlcov/
+
+# ==========================================
+# DOCKER VE YEREL ARAÇLAR (Docker / Local Tools)
+# ==========================================
+.docker-sync.js
+docker-compose.override.yml

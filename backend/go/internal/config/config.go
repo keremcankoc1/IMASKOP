@@ -39,7 +39,11 @@ func LoadEnv(path string) error {
 func Load() (Config, error) {
 	c := Config{DatabaseURL: os.Getenv("DATABASE_URL"), Secret: os.Getenv("AUTH_SECRET"), Address: os.Getenv("HTTP_ADDR"), Origin: os.Getenv("CORS_ORIGIN"), Environment: os.Getenv("APP_ENV")}
 	if c.Address == "" {
-		c.Address = "127.0.0.1:8080"
+		if port := os.Getenv("PORT"); port != "" {
+			c.Address = net.JoinHostPort("0.0.0.0", port)
+		} else {
+			c.Address = "127.0.0.1:8080"
+		}
 	}
 	if c.Environment == "" {
 		c.Environment = "development"

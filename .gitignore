@@ -85,3 +85,4 @@ docker-compose.override.yml
 *.exe
 backend/go/.env.integration
 db/integration-last-schema.txt
+.cloud-secrets/

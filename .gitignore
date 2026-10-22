@@ -79,3 +79,10 @@ htmlcov/
 # ==========================================
 .docker-sync.js
 docker-compose.override.yml
+
+# Yerel PostgreSQL kimlik bilgileri ve test çıktıları
+.pgpass
+*.exe
+backend/go/.env.integration
+db/integration-last-schema.txt
+.cloud-secrets/

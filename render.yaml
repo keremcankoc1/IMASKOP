@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: imaskop-api
+    runtime: go
+    plan: free
+    region: ohio
+    branch: deploy/imaskop-live
+    rootDir: backend/go
+    buildCommand: go build -mod=readonly -o app ./cmd/api
+    startCommand: ./app
+    healthCheckPath: /health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: HTTP_ADDR
+        value: 0.0.0.0:10000
+      - key: GO_VERSION
+        value: 1.26.5
+      - key: DATABASE_URL
+        sync: false
+      - key: AUTH_SECRET
+        generateValue: true
